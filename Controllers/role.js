@@ -22,37 +22,37 @@ async function getAll(req, res) {
     }
 }
 
-async function addRole(req, res) {
-  try {
-    const { error, value } = joi.verifyRoleSchema.validate(req.body);
+// async function addRole(req, res) {
+//   try {
+//     const { error, value } = joi.verifyRoleSchema.validate(req.body);
 
-    if (error) {
-      return res.json({
-        message: error.details[0].message,
-      });
-    }
+//     if (error) {
+//       return res.json({
+//         message: error.details[0].message,
+//       });
+//     }
 
-    const { roleName, permissions } = req.body;
+//     const { roleName, permissions } = req.body;
 
-    const roleFind = await Role.findOne({ roleName: roleName });
+//     const roleFind = await Role.findOne({ roleName: roleName });
 
-    if (roleFind) {
-      return res.status(400).json({
-        massage: "Role already exist",
-      });
-    }
+//     if (roleFind) {
+//       return res.status(400).json({
+//         massage: "Role already exist",
+//       });
+//     }
 
-    await Role.create(req.body);
+//     await Role.create(req.body);
 
-    res.status(200).json({
-      message: "Create Role successfully",
-    });
-  } catch (error) {
-    res.status(400).json({
-      message: error,
-    });
-  }
-}
+//     res.status(200).json({
+//       message: "Create Role successfully",
+//     });
+//   } catch (error) {
+//     res.status(400).json({
+//       message: error,
+//     });
+//   }
+// }
 
 async function addBulkRole(req, res) {
   try {
