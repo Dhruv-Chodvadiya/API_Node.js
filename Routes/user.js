@@ -13,7 +13,7 @@ router.post("/logIn", user.logIn);
 // Role 
 router.get("/getAll", Auth.jwtAuth, Auth.authorize, role.getAll);
 
-//router.post("/addRole", Auth.jwtAuth, Auth.authorize, role.addRole);
+// router.post("/addRole", Auth.jwtAuth, Auth.authorize, role.addRole);
 
 router.post("/addBulkRole", Auth.jwtAuth, Auth.authorize,role.addBulkRole);
 
