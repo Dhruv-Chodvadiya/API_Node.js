@@ -2,10 +2,8 @@ const { valid } = require("joi");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const User = require("../Models/User");
 const Role = require("../Models/Role");
-const task = require("../Models/Task");
-const joi = require("../Validation/joi");
+
 const { default: mongoose } = require("mongoose");
 
 async function getAll(req, res) {
