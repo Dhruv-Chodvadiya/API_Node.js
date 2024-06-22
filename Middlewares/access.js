@@ -1,4 +1,4 @@
-const JWT = require("jsonwebtoken");
+
 const User = require("../Models/User");
 const Role = require("../Models/Role");
 
