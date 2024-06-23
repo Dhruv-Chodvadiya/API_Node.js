@@ -1,5 +1,3 @@
-
-
 const Role = require("../Models/Role");
 
 const { default: mongoose } = require("mongoose");
