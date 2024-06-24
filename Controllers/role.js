@@ -96,8 +96,6 @@ async function updateRole(req, res) {
       updateObj.roleName = req.body.roleName;
     }
     if (req.body.permissions && req.body.permissions.length > 0) {
-      //updateObj.permissions = req.body.permissions;
-        //updateObj.$push = { permissions: { $each: req.body.permissions } };
         updateObj.$addToSet = { permissions: {$each: [...reqPermission]} };
     }
 
