@@ -50,18 +50,6 @@ async function getAll(req, res) {
 
 async function addBulkRole(req, res) {
   try {
-    /* const superAdmin = await User.findOne({ email: 'superadmin@example.com' });
-
-      const tokenID = req.tokenData.id;
-      const superAdminId = superAdmin._id.toString();
-      
-      if (tokenID != superAdminId) {
-        return res
-        .status(400)
-        .json({
-          message: "you are not Super Admin",
-        });
-      }   */
 
     let roles = req.body;
 
