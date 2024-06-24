@@ -108,33 +108,6 @@ async function getTaskAssignBy(req, res) {
         });
     }
 
-    /* if (tokenRole.roleName === 'superadmin') {
-            getAllTask = await Task.find({}, { _id: 0, __v: 0 })
-                .populate({
-                    path: 'assignedTo',
-                    select: "-_id -password -__v",
-                    populate: {
-                        path: "role",
-                        model: "role",
-                        select: "-_id -permissions -__v"
-                    }
-                })
-                .populate({
-                    path: "assignedBy",
-                    select: "-_id -__v -password -email",
-                    populate: {
-                        path: "role",
-                        model: "role",
-                        select: "-_id -__v -permissions"
-                    }
-                });
-          } else if (tokenRole.roleName === 'Admin') {
-            //const filterTask = await Task.find({ assignedBy: { $ne: tokenRole._id } })
-            //getAllTask = getAllUser.filter(user => user.role.roleName === 'Employee');
-          } */
-
-    //console.log(getAllTask);
-
     res.status(200).json({
       message: "Task Get successfully",
       getAllTask,
