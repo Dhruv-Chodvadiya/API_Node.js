@@ -63,8 +63,6 @@ async function getTaskAssignBy(req, res) {
 
     const tokenRole = await Role.findById(tokenDetails.role);
 
-    //console.log(tokenDetails);
-
     if (tokenRole.roleName === "superadmin") {
       getAllTask = await Task.find({}, { _id: 0, __v: 0 })
         .populate({
