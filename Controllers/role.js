@@ -102,7 +102,6 @@ async function updateRole(req, res) {
     const updateDetails = await Role.findByIdAndUpdate(
       { _id: new mongoose.Types.ObjectId(roleID) },
       updateObj
-      //{ $set: { roleName: newRoleName }, $push: { permissions: { $each: extraPermissions} } }
     );
 
     res.status(200).json({
