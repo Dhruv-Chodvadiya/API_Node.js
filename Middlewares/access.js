@@ -4,11 +4,9 @@ const Role = require("../Models/Role");
 exports.check = (requirePermission) => {
     return async(req,res,next) => {
         try {
-            //console.log(requirePermission);
             const findUser = await User.findOne({ email: req.tokenData.email});
-            //console.log(findUser);
+
             const findRole = await Role.findOne({_id: findUser.role});
-            //console.log(findRole);
 
             if (findRole.permissions.includes(requirePermission)) {
                 next();
