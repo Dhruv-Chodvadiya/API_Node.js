@@ -3,7 +3,6 @@ const user = require("../Controllers/user");
 const role = require("../Controllers/role");
 const task = require("../Controllers/task");
 const Auth = require("../Middlewares/auth");
-const User = require("../Models/User");
 const access = require("../Middlewares/access");
 
 const router = express.Router();
