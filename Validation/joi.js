@@ -30,11 +30,7 @@ const verifyUpdateUser = joi.object({
 const verifyTaskschema = joi.object({
     taskName: joi.string().required(),
     description: joi.string().required(),
-    //taskStatus: joi.string().valid('In Progress', 'Completed').default('Pending'),
-    //requireTime: joi.string().optional(),
-    //taskDate: joi.date().default(Date.now()),
     assignedTo: joi.string().required().regex(/^[0-9a-fA-F]{24}$/)
-    //assignedBy: joi.string().required() .regex(/^[0-9a-fA-F]{24}$/)
 });
 
 module.exports = { verifyUserSchema, verifyRoleSchema, verifyBulkRoleSchema, verifyUpdateUser, verifyTaskschema};
