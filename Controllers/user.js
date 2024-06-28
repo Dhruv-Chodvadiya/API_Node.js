@@ -109,7 +109,6 @@ async function logIn(req, res) {
 
 async function getAll(req, res) {
   try {
-    //const getAll = await User.find({}, { _id: 0, __v: 0, password: 0 }).populate("role", "-_id -permissions -__v");
     let getUserData;
 
     const tokenDetails = await User.findById(req.tokenData.id);
