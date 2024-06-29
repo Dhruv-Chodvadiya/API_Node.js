@@ -122,8 +122,6 @@ async function getAll(req, res) {
       getUserData = getAllUser.filter(user => user.role.roleName === 'Employee');
     }
 
-    //console.log(tokenRole.roleName);
-
 
 
     res.status(200).json({
