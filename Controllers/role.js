@@ -37,7 +37,7 @@ async function addBulkRole(req, res) {
 
     const insertedRoles = await Role.insertMany(req.body);
     res.status(200).json({
-      message: "Roles created successfully" /* , roles: insertedRoles  */,
+      message: "Roles created successfully"
     });
   } catch (error) {
     res.status(400).json({
