@@ -121,9 +121,6 @@ async function getAll(req, res) {
       const getAllUser = await User.find({}, { _id: 0, __v: 0, password: 0 }).populate("role", "-_id -permissions -__v");
       getUserData = getAllUser.filter(user => user.role.roleName === 'Employee');
     }
-
-
-
     res.status(200).json({
       getUserData,
     });
