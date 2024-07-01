@@ -18,9 +18,8 @@ mongoose.connect(DB).then(async () => {
   if (!defaultSuperAdmin) {
     const hashedPassword = await bcrypt.hash('superadmin123', 10);
 
-    defaultSuperAdmin = await User.create({name: 'Super Admin', email: 'superadmin@example.com', password: hashedPassword, role: superAdminRole._id});
-  
-    //console.log(defaultSuperAdmin);
+    defaultSuperAdmin = await User.create({ name: 'Super Admin', email: 'superadmin@example.com', password: hashedPassword, role: superAdminRole._id });
+    
   }
 
 }).catch((err) => {
