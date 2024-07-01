@@ -7,7 +7,6 @@ const jwtAuth = async (req, res, next) => {
     const token = req.headers.authorization;
     const decode = JWT.verify(token, process.env.SECRET_KEY);
     req.tokenData = decode;
-    //console.log(req.tokenData);
     next();
   } catch (error) {
     //console.log(error);
