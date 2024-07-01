@@ -41,6 +41,7 @@ async function authorize(req, res, next) {
 
 async function permission(req, res, next) {
   try {
+    
 
     /* const allUser = await User.find().populate('role').exec();
 
