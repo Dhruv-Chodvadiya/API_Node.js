@@ -41,11 +41,6 @@ async function authorize(req, res, next) {
 
 async function permission(req, res, next) {
   try {
-    
-
-    /* const allUser = await User.find().populate('role').exec();
-
-    const adminUsers = allUser.filter(user => user.role.roleName === 'Admin' || 'superadmin'); */
 
     const findUser = await User.findOne({ email: req.tokenData.email });
     
