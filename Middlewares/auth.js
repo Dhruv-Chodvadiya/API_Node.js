@@ -69,5 +69,4 @@ async function check(pera) {
     next();
   }
 }
-
 module.exports = { jwtAuth, authorize, permission, check };
