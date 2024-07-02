@@ -47,8 +47,6 @@ async function permission(req, res, next) {
 
     const allow = findRole.permissions.includes("read_user")
 
-    //console.log(allow);
-
     if(allow) {
       next();
     } else {
