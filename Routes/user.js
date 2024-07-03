@@ -29,7 +29,7 @@ router.post("/updateUser/:id", Auth.jwtAuth, Auth.authorize, user.updateUser);
 
 router.delete("/deleteUser/:id", Auth.jwtAuth, Auth.authorize, user.deleteUser);
 
-//task
+//Task
 router.post("/assignTask", Auth.jwtAuth, access.check('give_task'), task.assignTask);
 
 router.get("/getTaskAssignBy", Auth.jwtAuth, access.check('get_task'), task.getTaskAssignBy);
