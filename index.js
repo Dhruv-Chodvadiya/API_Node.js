@@ -10,4 +10,5 @@ app.use(express.json({}));
 app.use('/user', userRouter);
 
 const PORT = process.env.PORT;
+
 app.listen(PORT, () => console.log(`Server Start PORT : ${PORT}`));
