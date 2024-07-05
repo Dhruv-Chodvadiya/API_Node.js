@@ -5,6 +5,7 @@ const userRouter = require("./Routes/user");
 const app = express();
 
 require("./DB/connection");
+
 app.use(express.json({}));
 
 app.use('/user', userRouter);
